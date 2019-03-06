@@ -2,7 +2,7 @@
 
 Verrier Martin Ricard Astrid Flageul Valentin Djenane Alexandre
 
-Nos objectifs:
+## Nos objectifs:
 -Étudier la propagation du virus à l’échelle mondial
 -Au bout de combien de générations l’humanité a t-elle disparu, ou non ?
 -Les humains ont-ils réussi à éradiquer le virus?
