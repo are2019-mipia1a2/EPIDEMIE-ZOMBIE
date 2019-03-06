@@ -2,17 +2,22 @@
 
 Verrier Martin Ricard Astrid Flageul Valentin Djenane Alexandre
 
-## Nos objectifs:
--Étudier la propagation du virus à l’échelle d'une ville.
--Au bout de combien de générations l’humanité a t-elle disparu, ou non ?
--Les humains ont-ils réussi à éradiquer le virus?
--La rapidité du développement du virus en fonction du foyer de départ
+## I. Thème
 
-## Nos hypothèses:
-Les humains cherchent à annihiler les zombies
-Les zombies cherchent à tuer les humains
+Epidémie de Zombies dans une ville
 
-## Paramètres 
+## II. Nos objectifs:
+- Étudier la propagation du virus à l’échelle d'une ville.
+- Au bout de combien de générations l’humanité a t-elle disparu, ou non ?
+- Les humains ont-ils réussi à éradiquer le virus?
+- La rapidité du développement du virus en fonction du foyer de départ
+
+
+## III. Nos hypothèses:
+- Les humains cherchent à annihiler les zombies
+- Les zombies cherchent à tuer les humains
+
+## IV. Paramètres 
 ### Les paramètres fixes:
 - la taille de la ville
 - disposition de la ville
@@ -24,7 +29,7 @@ Les zombies cherchent à tuer les humains
 - proba de mort
 - proba des naissances
 
-## Caractéristique
+## V. Caractéristiques
 ### Les zombies
 - l’agressivité
 - Moyens de contaminations
@@ -41,3 +46,4 @@ Les zombies cherchent à tuer les humains
 - Densité de population
 - Natalité / mortalité
 - Migrations
+
