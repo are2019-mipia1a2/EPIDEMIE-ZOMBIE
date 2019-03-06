@@ -23,7 +23,7 @@ Epidémie de Zombies dans une ville
 - disposition de la ville
 ### Nos variables:
 - population mondiale initiale
-- la patient 0
+- le patient 0
 - les probabilités que l'infection soit transmise
 - proba de prendre un transport
 - proba de mort
