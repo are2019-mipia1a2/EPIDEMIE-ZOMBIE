@@ -1,10 +1,4 @@
 
-
-import math
-import random
-import numpy as np
-from Parametres import *
-
 ##### HUMAIN
 
 def liste_tuple(liste):
