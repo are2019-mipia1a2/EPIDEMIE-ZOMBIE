@@ -49,4 +49,7 @@ Epidémie de Zombies dans une ville
 
 # COMPTE RENDU FIN DE SÉANCES
 ## 13/03/19
-Aujourd'hui nous avond fait des rechecher pour savoir comment faire une map avec Python, nous avons défini les classes dont on allait avoir besoin pour le reste de notre code et nous avons commencer à coder la maps.
+Aujourd'hui Une partie du groupe s'est chargée de faire des recheches pour savoir comment coder une map et faire se déplacer les humains et zombie sur Python.
+L'autre partie du groupe quand à elle s'est chargé de commencer à définir les classes dont on allait avoir besoin pour le reste de notre code.
+Ils ont alors codé la fonction _init_(self) qui renferme toutes les caratéristiques des humains ainsi que les paramètres que nous utiliseront par la suite du programme. 
+
