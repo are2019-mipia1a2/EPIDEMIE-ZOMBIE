@@ -92,7 +92,26 @@ class Humain:
             Liste_humain.remove(self)
             Liste_classe.remove(self)
             Liste_zombie+=carte[i_humain,j_humain]
-            Liste_classe+=carte[i_humain,j_humain]                
+            Liste_classe+=carte[i_humain,j_humain] 
+            
+            
+     def shoot(self,carte,Liste_zombie,Liste_classe):
+        if len(self.liste_zombie_proche)<=2 and len(self.liste_zombie_proche)>0 :    #
+            if self.sac["Munitions"]>=1:
+                x=random.randint(taux_réussite_tir1,taux_réussite_tir2)
+                print(x)
+                if x==1 and self.Zombie_le_plus_proche2 != None:
+                    Liste_classe.remove(self.Zombie_le_plus_proche2)
+                    Liste_zombie.remove(self.Zombie_le_plus_proche2)
+                    carte[self.Zombie_le_plus_proche]=Vide()
+                    self.sac["Munitions"]=self.sac["Munitions"]-1
+                    print(self.sac)
+                    print(carte[self.Zombie_le_plus_proche])
+                    print("Un zombie s'est fait tué")
+                else:
+                    self.sac["Munitions"]=self.sac["Munitions"]-1
+                    print("RATE")
+                    print(self.sac)   
   
   
   
