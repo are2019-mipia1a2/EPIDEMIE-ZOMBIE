@@ -47,3 +47,6 @@ Epidémie de Zombies dans une ville
 - Natalité / mortalité
 - Migrations
 
+# COMPTE RENDU FIN DE SÉANCES
+## 13/03/19
+Aujourd'hui nous avond fait des rechecher pour savoir comment faire une map avec Python, nous avons défini les classes dont on allait avoir besoin pour le reste de notre code et nous avons commencer à coder la maps.
