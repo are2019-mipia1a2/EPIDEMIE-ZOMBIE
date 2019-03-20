@@ -54,5 +54,6 @@ L'autre partie du groupe quand à elle s'est chargé de commencer à définir le
 Ils ont alors codé la fonction _init_(self) qui renferme toutes les caratéristiques des humains ainsi que les paramètres que nous utiliseront par la suite du programme.
 
 ## 20/03/19
-
+Nous avons definie nos paramètre généraux (modifiable) ainsi que fini de définir a classe Humain.
+Nous avons commencer à creer notre classe Zombie.
 
