@@ -1,5 +1,5 @@
 
-#PARAMETRES GENERAUX
+#PARAMETRES GENERAUX (valeurs peuvent et doivent etre changées)
              
 i = 150           # Nombre de lignes de la Carte
 j = 150           # Nombre de colonnes de la Carte
@@ -12,7 +12,7 @@ nb_zombie = 150  # Nombre de zombies
 nb_batiment = 30  # #Nombre de batiments
  
 #Paramétrage de la taille des batiments
-taille_des_maisons=range(4,7)
+taille_des_maisons=range(4,7)                           
 taille_des_armureries= 7
 taille_des_magasins=range(8,12)
 taille_des_hopitaux=18
