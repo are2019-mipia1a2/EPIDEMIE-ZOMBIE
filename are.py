@@ -34,7 +34,7 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
    
     def __init__(self):
         self.nom = Humain.num_humain
-        Humain.num_humain += 1                   ??????
+        Humain.num_humain += 1                   #??????
         self.compteur_temps=0
         self.pdv=random.randint(40,100)
         self.faim=faim_humain
@@ -59,11 +59,11 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
         self.Zombie_le_plus_proche = (i_zombie, j_zombie)
         self.liste_zombie_proche = []
         for e in range(len(liste_zombie)):
-            i_zombieTempo, j_zombieTempo = liste_zombie[e]                           #Tempo???????
+            i_zombieTempo, j_zombieTempo = liste_zombie[e]                           #Tempo = temporaire
             if i_zombieTempo in range((i_humain-Odorat_H),(i_humain+Odorat_H+1))\
             and j_zombieTempo in range((j_humain-Odorat_H),(j_humain+Odorat_H+1)):         # L'humain est dans un voisinage +/- 10 du zombie
                  self.liste_zombie_proche +=[(i_zombieTempo,j_zombieTempo)]
-                 dz=math.sqrt((i_zombieTempo - i_humain)**2+(j_zombieTempo - j_humain)**2)
+                 dz=math.sqrt((i_zombieTempo - i_humain)**2+(j_zombieTempo - j_humain)**2) #distance de l'huùmain et du zombie
                  if (dz<dmin):                        # Compare la distance H-Z la plus petite trouvée
                     i_zombie = i_zombieTempo                                          # Garde en mémoire les coordonnées du zombie le plus proche
                     j_zombie = j_zombieTempo                                          
@@ -74,18 +74,18 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
     def Pdv(self,carte,Liste_humain,Liste_classe):
         """Etat de la vie de l'humain """
         i_humain, j_humain = self.place_MATRICE
-        if self.faim == 0:
+        if self.faim == 0:                                  
             if self.compteur_temps < 20:
                 self.compteur_temps += 1
             else:
-                self.pdv -= 1
+                self.pdv -= 1                                                   # si le compteur faim arrive à 20 perd un pdv
                 self.compteur_temps = 0
                 self.faim=0
         if self.pdv<=80 and self.sac["Médicaments"]>1:
             self.sac["Médicaments"]-=1
             self.pdv+=20
         if self.pdv==0:
-            carte[i_humain,j_humain]=Zombie()
+            carte[i_humain,j_humain]=Zombie()                                   #l'humain meurt et devient un zombie
             carte[i_humain,j_humain].place_MATRICE=i_humain,j_humain
             Liste_humain.remove(self)
             Liste_classe.remove(self)
@@ -93,7 +93,7 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
             Liste_classe+=carte[i_humain,j_humain]
            
     def Faim(self):
-        if self.sac["Nourriture"]>=1 and self.faim<=0:
+        if self.sac["Nourriture"]>=1 and self.faim<=0:                    # si il a faim et il a de la nourriture il mange
                
                 self.sac["Nourriture"]-=1
                 self.faim+=20
@@ -101,11 +101,11 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
         if self.compteur_faim < 2:
             self.compteur_faim += 1
         elif self.faim>0:
-            self.faim -=1
+            self.faim -=1                                               #sinon il perd des points de faim
             self.compteur_faim=0
            
     def shoot(self,carte,Liste_zombie,Liste_classe):
-        if len(self.liste_zombie_proche)<=2 and len(self.liste_zombie_proche)>0 :
+        if len(self.liste_zombie_proche)<=2 and len(self.liste_zombie_proche)>0 : #
             if self.sac["Munitions"]>=1:
                 x=random.randint(0,1)
                 print(x)
