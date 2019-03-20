@@ -105,22 +105,22 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
             self.compteur_faim=0
            
     def shoot(self,carte,Liste_zombie,Liste_classe):
-        if len(self.liste_zombie_proche)<=2 and len(self.liste_zombie_proche)>0 : #
-            if self.sac["Munitions"]>=1:
+        if len(self.liste_zombie_proche)<=2 and len(self.liste_zombie_proche)>0 : #la porté d'un humain est de 2
+            if self.sac["Munitions"]>=1:                                          # utilise une munition pour son tire
                 x=random.randint(0,1)
                 print(x)
-                if x==1 and self.Zombie_le_plus_proche2 != None:
+                if x==1 and self.Zombie_le_plus_proche2 != None:                 # une chance sur 2 de toucher lors du tire
                     Liste_classe.remove(self.Zombie_le_plus_proche2)
                     Liste_zombie.remove(self.Zombie_le_plus_proche2)
                     carte[self.Zombie_le_plus_proche]=Vide()
                     self.sac["Munitions"]=self.sac["Munitions"]-1
                     print(self.sac)
                     print(carte[self.Zombie_le_plus_proche])
-                    print("Un zombie s'est fait tué")
+                    print("Un zombie s'est fait tué")                             #si touché zombie meurt
                 else:
                     self.sac["Munitions"]=self.sac["Munitions"]-1
                     print("RATE")
-                    print(self.sac)
+                    print(self.sac)                                                #sinon zombie reste en vie
                    
     def prendre_nourr(self,carte):
         i_humain, j_humain = self.place_MATRICE
