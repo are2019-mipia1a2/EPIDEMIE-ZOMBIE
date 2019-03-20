@@ -1,1 +1,14 @@
 ##Classe Zombie###
+
+class Zombie :
+    num_zombie=0
+    
+    def _init_(self):
+        self.nom = Zombie.num_zombie
+        Zombie.num_Zombie += 1
+    
+    def _str_(self):
+        return "Zombie " + str(self.nom)
+    
+    def _repr_(self):
+        return self._str_()
