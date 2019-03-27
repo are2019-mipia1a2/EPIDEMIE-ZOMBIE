@@ -58,5 +58,4 @@ Nous avons definie nos paramètre généraux (modifiable) ainsi que fini de déf
 Nous avons commencer à creer notre classe Zombie.
 
 ## 27/03/19
-Aujourd'hui nous avons défini notre classe Zombie, et nous avons enfin réussi à comprendre comment coder une map avec des matrices... Nous avons donc commencé à coder notre maps.
-
+Aujourd'hui nous avons défini notre classe Zombie.
