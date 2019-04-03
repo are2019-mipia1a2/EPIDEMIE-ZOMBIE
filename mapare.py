@@ -1,3 +1,11 @@
+def CreationMatriceZero(x, y):
+    """
+   int*int -> list[list[int]]
+   Crée une map de 0 de hauteur x et de largeur y
+   """
+   
+    return [[0 for j in range(y)] for i in range(x)]
+
 def set_map(carte):
    """
    list[list[int*Object]] -> liste[list[Object]]
