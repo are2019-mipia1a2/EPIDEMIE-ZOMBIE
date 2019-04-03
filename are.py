@@ -34,7 +34,7 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
    
     def __init__(self):
         self.nom = Humain.num_humain
-        Humain.num_humain += 1                   #??????
+        Humain.num_humain += 1                   
         self.compteur_temps=0
         self.pdv=random.randint(40,100)
         self.faim=faim_humain
@@ -43,9 +43,9 @@ Classe définissant un humain, qui peux se déplacer, fuir les zombies
        
    
     def __str__(self):
-        return "Humain " + str(self.nom)      #????????
+        return "Humain " + str(self.nom)      
        
-    def __repr__(self):                       #?????????
+    def __repr__(self):                       
         return self.__str__()
        
    
