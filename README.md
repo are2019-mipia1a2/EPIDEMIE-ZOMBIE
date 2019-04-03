@@ -58,5 +58,5 @@ Nous avons definie nos paramètre généraux (modifiable) ainsi que fini de déf
 Nous avons commencer à creer notre classe Zombie.
 
 ## 27/03/19
-Aujourd'hui nous avons défini notre classe Zombie. Pour coder les classes nous nous sommes aidés d'un site: https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232721-apprehendez-les-classes?fbclid=IwAR0tlbxvmCCcZDxL5yMi-RJvmxID0JaxM4WikrRzws-XkD5qRQ3xB_fbg-s  .
+Aujourd'hui nous avons défini notre classe Zombie. Pour coder les classes nous nous sommes aidés de plusieurs sites comme: https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232721-apprehendez-les-classes?fbclid=IwAR0tlbxvmCCcZDxL5yMi-RJvmxID0JaxM4WikrRzws-XkD5qRQ3xB_fbg-s  .
 
