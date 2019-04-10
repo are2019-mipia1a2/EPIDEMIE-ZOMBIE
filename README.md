@@ -60,3 +60,9 @@ Nous avons commencer à creer notre classe Zombie.
 ## 27/03/19
 Aujourd'hui nous avons défini notre classe Zombie. Pour coder les classes nous nous sommes aidés de plusieurs sites comme: https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232721-apprehendez-les-classes?fbclid=IwAR0tlbxvmCCcZDxL5yMi-RJvmxID0JaxM4WikrRzws-XkD5qRQ3xB_fbg-s  .
 
+## 03/04/19
+Aujourd'hui nous avons fini de coder la classe Zombie, coder la map sous forme de matrice.
+Nous avons également fixé les objectifs de notre visualisation (placement aléatoire des batiments, batiments en couleur, courbes de visualisations).
+
+## 10/04/19
+
