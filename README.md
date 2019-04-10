@@ -65,4 +65,5 @@ Aujourd'hui nous avons fini de coder la classe Zombie, coder la map sous forme d
 Nous avons également fixé les objectifs de notre visualisation (placement aléatoire des batiments, batiments en couleur, courbes de visualisations).
 
 ## 10/04/19
+Aujourd'hui nous avons finis de coder tout notre projet, nous avons réussi à avoir notre animation (malgrè quelques contre temps). Nous avons aussi continuer notre compte rendu. 
 
