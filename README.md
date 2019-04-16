@@ -1,4 +1,4 @@
-# Ropport final
+# Rapport final
 
 ## I. Résumé
 
@@ -27,7 +27,7 @@ De plus, hors contexte scientifique, il fallait également que chaque personne d
 
 Finalement, une dernière notion importante sur laquelle reposait notre travail était celle d’espacer au mieux notre travail et de ne pas travailler “en bloc”. En effet, espacer notre travail, à la fac comme chez nous, nous permettait de prendre plusieurs fois du recul et remettre à chaque fois en question ce que nous faisons. De plus, lorsque que la source d’un bug nous échappe pendant 2h, il est nécessaire de revenir plus tard avec un regard nouveau.
 
-## IV. Contibutions
+## IV. Contributions
 
 Nous avons décidé pour l’écriture du code de diviser l’algorithme en 2 grandes parties : L’environnement et les agents.
 
@@ -43,13 +43,9 @@ Une fois après avoir fini la réunion des codes et la fusion, nous avons pu com
 
 
 Contribution lors de la rédaction du rapport :
-
 Astrid : Dynamique, Interprétation des résultats.
-
 Valentin: Résumés, Environnement, Contributions.
-
 Martin : Introduction, Liste des paramètres, Agents.
-
 Alexandre : Agents, Environnement, Liste des paramètres.
 
 ### A/ Les agents
