@@ -192,8 +192,9 @@ Pour faciliter la manipulation et la lisibilité de cette liste de liste par la 
 
 ## V. Conclusion
 
+## VI. Summary
 
-## VI. résumé en anglais
+First of all, our main goal was to model a Zombie attack in a city which is full of humans. We wanted to make a realistic city with a lot of buildings : hospitals, armories and shops (for food). Then, humans can evolve in a city which looks like a real city on Earth and they can interact with their environment. More specifically, our aim is to study the evolution of humans population compared to zombie’s one. Humans can kill zombies and zombies can bite humans which logically participate a lot in the evolution of populations. To brought to an end our project, we have encoded a map upon which we have placed randomly our buildings and agents, interacting there-between thanks to a lot of Python functions. The ‘class’ type of Python was really useful to encode humans and zombies along with other functions more familiar.
 
 
 
