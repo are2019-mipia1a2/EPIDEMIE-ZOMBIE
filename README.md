@@ -37,6 +37,23 @@ Finalement, une dernière notion importante sur laquelle reposait notre travail 
 
 ### B/ Environnement
 
+
+La représentation de l’épidémie de Zombie se fait sur une carte, dont l'affichage repose sur le parcour de la carte, de l'interprétation de chaque case puis du envoie des donnée, etc.
+Nous avons utilisé un mode de programmation, appelé “par valeur”, qui consiste à créer des listes qui contiennent les agents et d’appliquer les fonctions à partir de ces listes.
+Pour cela nous avons dû d’abord créer un support pour nos agents, qui soit facile à manipuler. Nous avons donc fait une carte sous forme de tableau dans laquelle on stocke nos différents objets. 
+Nous l’avons initialisé par une liste de liste avec que des zéros dont les dimensions sont mis dans les paramètres généraux :
+
+return [[0 for j in range(y)] for i in range(x)]
+
+Cette liste n’est créée qu’une fois, ce qui nous permet de ne pas prendre trop de mémoire, et donc sans risque de faire planter l’ordinateur.
+	Ensuite, on implante ensuite un nombre définit de bâtiments. Pour cela, on parcourt la carte et on les insère aléatoirement avec chacun un type spécifique: hôpital, magasin, maison ou armurerie. Chaque fois qu’ils sont insérés on leur donne une “place_matrice” et on les ajoute à la liste des bâtiments. Ils ont tous la même structure: c’est un amas d’objet de classe “Bâtiment” ayant une méthode définissant leur type, et sont dotés d’une unique porte. Cette porte sert d’interface entre les agents de type “Humain” et les bâtiments. Elle contient à elle seule toutes les informations sur l’état de l’infrastructure, c’est-à-dire ses ressources disponibles que les humains convoitent, comme la nourriture, les munitions ou les médicaments.
+Pour finir, on ajoute les deux types d’agents, qui sont les objets de classe “Humain” et “Zombie”. Cette implémentation se fait également de manière aléatoire, avec néanmoins un contrôle sur le nombre d’agents à implanter. Ce nombre est défini dans les paramètres généraux. Chaque fois qu’un agent est créé, nous lui donnons une “place_matrice” et l’ajoutons à la liste correspondant à sa classe.
+
+Pour faciliter la manipulation et la lisibilité de cette liste de liste par la suite, on la transforme en un tableau de type array grâce à la fonction array() du module scipy.
+
+
+
+
 ### C/ Dynamique
 
 #### 1. Structure
