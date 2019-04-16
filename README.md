@@ -34,7 +34,7 @@ Finalement, une dernière notion importante sur laquelle reposait notre travail 
 #### 1. Les humains
 
 La classe humain contient beaucoup de caractéristiques et de comportements afin de rapprocher leur fonctionnement du notre. Les humains peuvent donc se déplacer, sentir la présence des zombies, tuer les zombies, ils ont aussi des points de vie et une barre de faim, ils ont besoin de se ravitailler (nourritures, munitions, médicaments), et ils peuvent se déplacer selon leur caractéristiques actuelles (s’il y a un zombie à proximité, s’il a besoin de se ravitailler, il se déplace vers une porte, …)
-A l’initialisation, l’humain possède un compteur de “faim” qui prend une valeur défini dans les paramètre généraux, des PDV (Points DE Vie) prenant une valeur entre 40 et 100 choisie aléatoirement, on suppose qu’ils n’ont pas encore faim et que dans leur sac ils ne possèdent que 4 munitions.
+A l’initialisation, l’humain possède un compteur de “faim” qui prend une valeur défini dans les paramètre généraux, des PDV (Points DE Vie) prenant une valeur entre 40 et 100 choisie aléatoirement, on suppose qu’ils n’ont pas encore faim et que dans leur sac ils ne possèdent que 3 munitions maximum.
 
 def __init__(self):
    self.nom = Humain.num_humain
