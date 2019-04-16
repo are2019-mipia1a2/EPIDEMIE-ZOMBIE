@@ -21,7 +21,7 @@ Chaînes de caractères : intervalles, itération...
 Listes : définitions, transformation de listes, opérations diverses... 
 Ensembles et Dictionnaires : opérations de base, Itération sur les ensembles et les dictionnaires, ils nous ont surtout été utile lors de la création de nos classes. 
  
-Cependant, nous avons dû pousser un peu nos connaissances afin de créer une classe, c’est-à-dire un nouveau type d’objet. Nous en avons créé deux, la classe zombies et la classe humain, qui définissent le comportement et les attributs associés aux zombies et aux humains. Dans le cadre de ses classes nous avons dû apprendre à maîtriser la variable “self” ou autrement dit le “sois même” qui nous a permis de coder des classes capables de créer des objets différents en boucle. Ensuite nous avons dû créer une map, dans ce but nous avons dû apprendre à construire des matrices avec python.  Donc pour notre map nous avons créé une matrice et nous y avons implanté nos agents, pour cela nous avons su maîtriser les “import”. Pour mieux comprendre ces fonctions nous avons fait appel à l’aide d’amis qui sont en 4A à Polytech.
+Cependant, nous avons dû pousser un peu nos connaissances afin de créer une classe, c’est-à-dire un nouveau type d’objet. Nous en avons créé deux, la classe zombies et la classe humain, qui définissent le comportement et les attributs associés aux zombies et aux humains. Dans le cadre de ses classes nous avons dû apprendre à maîtriser la variable “self” ou autrement dit le “sois même” qui nous a permis de coder des classes capables de créer des objets différents en boucle. Ensuite nous avons dû créer une map, dans ce but nous avons dû apprendre à construire des matrices avec python.  Donc pour notre map nous avons créé une matrice et nous y avons implanté nos agents, pour cela nous avons su maîtriser les “import”.
 
 De plus, hors contexte scientifique, il fallait également que chaque personne du groupe soit coordonnée avec les autres afin d’optimiser au mieux notre efficacité. En effet, parfois en mettant les programmes en commun ils ne marchaient plus car les structures des algorithmes n’étaient pas adaptés pour pouvoir fonctionner entre eux. Cela représente une autre notion fondamentale de notre travail qui a été d’avoir une bonne coordination en parlant beaucoup entre nous pour savoir exactement ce que faisait chaque membre du groupe afin d’avoir une vision globale de ce nous faisions tous et d’avoir un aperçu de notre rendu final pour éviter tout dérapage ou une mauvaise compréhension de ce que nous recherchions.
 
@@ -31,9 +31,66 @@ Finalement, une dernière notion importante sur laquelle reposait notre travail 
 
 ### A/ Les agents
 
-#### 1. Les zombies
+#### 1. Les humains
 
-#### 2. Les humains
+La classe humain contient beaucoup de caractéristiques et de comportements afin de rapprocher leur fonctionnement du notre. Les humains peuvent donc se déplacer, sentir la présence des zombies, tuer les zombies, ils ont aussi des points de vie et une barre de faim, ils ont besoin de se ravitailler (nourritures, munitions, médicaments), et ils peuvent se déplacer selon leur caractéristiques actuelles (s’il y a un zombie à proximité, s’il a besoin de se ravitailler, il se déplace vers une porte, …)
+A l’initialisation, l’humain possède un compteur de “faim” qui prend une valeur défini dans les paramètre généraux, des PDV (Points DE Vie) prenant une valeur entre 40 et 100 choisie aléatoirement, on suppose qu’ils n’ont pas encore faim et que dans leur sac ils ne possèdent que 4 munitions.
+
+def __init__(self):
+   self.nom = Humain.num_humain
+ 	   Humain.num_humain += 1
+ 	   self.compteur_temps=0
+ 	   self.pdv=random.randint(40,100)
+ 	   self.faim=faim_humain
+	   self.compteur_faim=0
+   self.sac={"Munitions":4,"Médicaments":0,"Nourriture":0}
+Le compteur de temps va servir à compter le temps qu’il passe en état “a faim”
+
+
+On crée différentes fonctions pour définir leur comportements et leur caractéristiques: 
+
+
+Tout d’abord, on a créé une fonction pour que les humains sentent la présence des zombies dans un rayon de 10, en rendant les coordonnées du zombie le plus proche grâce à la formule mathématique donnant la distance entre deux points.
+
+math.sqrt((i_zombieTempo - i_humain)**2+(j_zombieTempo - j_humain)**2)
+Avec  i_zombieTempo,j_zombieTempo  les coordonnées d’un zombie et i_humain,j_humain  les coordonnées d’un humain.
+
+Ensuite on a codé une fonction Pdv : ses points de vie diminuent au fur et à mesure qu’il marche en ayant faim. S’il possède des médicaments, il les prend pour récupérer de la vie.
+ 
+
+def Pdv(self, carte) :
+      	Si son compteur faim =0 :
+                	Si le compteur temps < 50 :
+                          	Compteur temps = Compteur temps +1
+                	Sinon :
+                          	Il perd 1 pdv
+                          	On réinitialise le compteur temps à 0
+                          	On réinitialise le compteur faim à 0
+      	Si ses pdv<=80 et il a des médicaments :
+                	Son sac perd 1 de médicament
+                	Ses pdv augmentent de 20
+      	Si ses pdv==0 :
+                	L’humain se transforme en zombie
+ 	
+Puis une fonction shoot qui lui permet de tuer des zombies (ici très simplifiée)
+ 
+def shoot(self, carte) :
+Si l’humain possède au moins une munition :
+      	Une chance sur 2 de tuer le zombie et l’humain perd une munition
+ 
+Nous avons aussi créé les fonctions « ravitaillement »  et « run » qui prennent en compte de nombreux paramètres comme ce que l’humain avait dans son sac, ce qui lui manquait, s’il devait se diriger vers un type de bâtiment en priorité (pour ses points de vie par exemple), etc. En version très simplifiée :
+ 
+def ravitaillement(self,carte) :
+ L’humain regarde autour de lui s’il y a des portes:
+ Si son stock de médicament n’est pas plein et pas de zombie autour :
+          Se dirige vers une porte d’hôpital et remplit son sac
+ Si son stock d’arme n’est pas plein et pas de zombie autour:
+           Se dirige vers une armurerie et remplit son sac
+ Si son stock de nourriture n’est pas plein et pas de zombie autour:
+           Se dirige vers un magasin et remplit son sac 
+
+
+#### 2. Les zombies
 
 ### B/ Environnement
 
@@ -66,6 +123,10 @@ Pour faciliter la manipulation et la lisibilité de cette liste de liste par la 
 #### 2. Affichage
 
 ## V. Conclusion
+
+
+## VI. résumé en anglais
+
 
 
 
