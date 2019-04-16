@@ -254,6 +254,42 @@ On pourrait alors imaginer que si l’on baissait encore plus la précision, les
 
 First of all, our main goal was to model a Zombie attack in a city which is full of humans. We wanted to make a realistic city with a lot of buildings : hospitals, armories and shops (for food). Then, humans can evolve in a city which looks like a real city on Earth and they can interact with their environment. More specifically, our aim is to study the evolution of humans population compared to zombie’s one. Humans can kill zombies and zombies can bite humans which logically participate a lot in the evolution of populations. To brought to an end our project, we have encoded a map upon which we have placed randomly our buildings and agents, interacting there-between thanks to a lot of Python functions. The ‘class’ type of Python was really useful to encode humans and zombies along with other functions more familiar.
 
+## ANNEXE 1
+
+Liste de l’ensemble des paramètres du programme
+
+### I. Agents
+
+Humains
+- Périmètre maximal de détection des zombies
+- Capacité de stockage maximale du sac pour chaque type de ressource
+- Niveau de satiété initial (compteur de faim)
+- Nombre de ressources initiales (munitions, médicaments, nourriture)
+- Nombre de perte de points de faim à chaque itération
+- Capacité de “réparation” de chaque type de ressource (médicaments & nourriture)
+- Taux de réussite au tir
+
+Zombie
+- Périmètre maximal de détection des humains
+- Probabilité de transformation d’un humain en zombie lors d’une morsure
+
+### II. Environnement
+
+- Longueur et largeur de la carte
+- Nombre d’agents (Zombies & Humains)
+- Nombre de bâtiments
+- Taille de chaque type de bâtiment
+- Probabilité d’apparition de chaque type de bâtiment
+- Capacité maximale de stockage des ressources selon le type de bâtiment
+
+### III. Dynamique
+
+- Nombre de simulations totales
+- Nombre de simulations par seconde
+
+
+
+
 
 
 
