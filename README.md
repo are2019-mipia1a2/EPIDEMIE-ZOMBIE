@@ -43,9 +43,13 @@ Une fois après avoir fini la réunion des codes et la fusion, nous avons pu com
 
 
 Contribution lors de la rédaction du rapport :
+
 Astrid : Dynamique, Interprétation des résultats.
+
 Valentin: Résumés, Environnement, Contributions.
+
 Martin : Introduction, Liste des paramètres, Agents.
+
 Alexandre : Agents, Environnement, Liste des paramètres.
 
 ### A/ Les agents
@@ -184,28 +188,71 @@ Pour faciliter la manipulation et la lisibilité de cette liste de liste par la 
 
 #### 1. Structure
 
+La dynamique est le troisième et dernier fichier de notre code. Cette partie réunie et appelle toutes les fonctions, classes et objets créés précédemment et lance la simulation. Par conséquent, elle contient également les fonctions graphiques, ainsi que celles gérant les courbes de suivis.
+On parcourt l’ensemble des objets de la carte et pour chaque objet, on appelle l’ensemble des méthodes qu’il possède. C’est donc les méthodes des objets qui “décident” si elles doivent s’activer et non la dynamique. 
+
 #### 2. Affichage
 
-## V. Conclusion
+Afin de suivre visuellement en temps réel notre simulation, nous avons choisi d’utiliser une animation sous matplotlib.
+
+Nous avons alors dû importer matplotlib.animation afin d’obtenir une figure qui s’anime à chaque simulation en affichant les nouvelles positions des agents.
+L’objectif est alors d’obtenir une carte avec des cases colorées qui permet de différencier les différents agents et types de bâtiments.
+Afin d’en arriver là, il faut tout d’abord créer une fonction qui sert à créer une carte remplie de chiffres à partir de notre carte remplie d’agents. En effet, matplotlib ne pouvant afficher et différencier des classes, il faut donc les remplacer par des chiffres avec un chiffre différent pour chaque classe.
+
+Vient ensuite la fonction qui permet de paramétrer la figure et l’image qui seront utilisées par la suite pour l’animation. Dans cette fonction seront spécifiés la taille de la figure, la couleur de chaque élément ( Zombie, Humain, Bâtiments ) et aussi par exemple la présence ou non d’une légende permettant d’associer les couleurs aux agents ou aux bâtiments correspondants.
+
+La liste des couleurs choisies pour représenter les agents est définie de la manière suivante : 
+cmap=mpl.colors.ListedColormap(["White","Red","Green","saddlebrown","grey","royalblue","olive","salmon"])
+Puis vient la liste des agents qui seront possiblement présents sur la carte :
+bounds=(0, 1, 2, 3.1, 3.2, 3.3, 3.4, 3.5, 4)   
+Ici, chaque chiffre correspond à un élément, les ‘0’ représentent par exemple le vide, les ‘1’ les humains, etc
+Il faut alors associer ces deux listes pour que chaque éléments de mêmes indices pour ces deux listes, soient associés ensemble ce qui se fait de la façon suivante :
+norm = mpl.colors.BoundaryNorm(bounds,cmap.N)
+
+Une fois la figure et l’image définies, une fonction “update” sert à définir le contenu de chaque simulation à savoir le déplacement des agents selon les comportements définis.
+
+Pour finir, l’animation se finalise par une fonction permettant de définir le nombre de simulations, le temps entre chaques simulations, la figure et l’image à utiliser pour ces simulations, etc.
+
+ani = animation.FuncAnimation(fig, update, frames = range(nb_simulations), interval = 10  , repeat = False )
+plt.show()
+
+Cela clôture donc la partie animation de la simulation.
+
+Nous avons ensuite choisi d’ajouter un suivi via des courbes d’évolution afin d’améliorer l’analyse des évolutions de population nos agents.
+
+Pour cela nous avons créé une fonction qui permet de tracer des courbes grâce à matplotlib montrant la population d’humain et de zombies à chaque itération. Cela étant possible grâce à deux listes créées dans la partie dynamique du code, qui s’incrémentent à chaque fin de simulation afin d’enregistrer les populations des deux agents à chaque fois.
+
+plt.plot(x1,evolution_H,"green")
+plt.plot(x1,evolution_Z,"red")
+
+Ici nous avons alors en abscisse x1 qui représente le nombre d’itérations et en ordonnée le nombre de zombies ou d’humains à chaque moment de la simulation.
+
+
+#### 3. Analyse des résultats
+
+Les courbes de suivi nous ont alors permis d’étudier l’évolution des deux populations lorsque l’on joue sur les différents paramètres à notre disposition ( Populations de départ, Nombre de balles par humain au départ, Précision du tir des humain, etc ).
+
+On peut alors remarquer de nombreuses disparités dans les évolutions des deux populations avec néanmoins des similitudes comme par exemple le fort pic de mortalité des zombies lors de la première simulation, cela étant dû au fait que certains zombies commencent la simulation dans le champ de tirs des humains qui les tuent alors dès la première simulation.
+Nous avons alors retenu quelques paramètres qui nous semblaient intéressants à faire varier afin d’observer des résultats variables dans le devenir des agents en fonction de ces modifications. ( Courbes en Annexe 2 ) 
+
+- Courbes 1 et 2 :  Modification des populations de départ
+Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier les populations de départ à savoir 100 humains et 50 zombies sur la courbe 1 contre 30 humains et 100 zombies sur la courbe 2.
+On remarque alors que si les humains sont présent en forte supériorité numérique au départ, il finissent assez rapidement par éradiquer quasi-totalement les zombies. 
+A l’inverse, si les zombies sont introduits en forte supériorité numérique, ils vont avoir à prendre assez vite le dessus sur les humains avant d’atteindre un état de stabilité dû au manque de rencontres entre les humains/zombies .
+
+- Courbes 3 et 4 :  Modification du nombre de munitions de départ
+Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier le nombre de munitions de départ avec le même nombre d’agents au départ ( 100 humains et 100 zombies ) à savoir 2 munitions pour la courbe 3 et 3 munitions pour la courbe 4.
+Nous pouvons alors observer une forte influence de ce paramètre sur l’évolution des populations. En effet, avec 2 munitions au départ sur la courbe 3, on remarque une évolution vers un certain équilibre tandis qu’avec 3 munitions au départ, les humains prennent immédiatement le dessus et l’on observe alors la quasi éradication des zombies.
+
+- Courbes 5 et 6 :  Modification de la précision de tir des humains
+Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier la précision de tir des humains avec le même nombre d’agents au départ ( 100 humains et 100 zombies ) et le même nombre de munitions de départ ( ici 3 ). La précision de tir est de 1 chance sur 2 pour la courbe 5 et 1 chance sur 3 pour la courbe 6.
+Là où les humains éradiquent rapidement les zombies sur la courbe 5, ils ont en revanche beaucoup plus de pertes sur la courbe 6 pour au final atteindre une stabilité entre les humains et les zombies.
+On pourrait alors imaginer que si l’on baissait encore plus la précision, les humains viendraient assez rapidement à être éradiqués par les zombies.
+
 
 ## VI. Summary
 
 First of all, our main goal was to model a Zombie attack in a city which is full of humans. We wanted to make a realistic city with a lot of buildings : hospitals, armories and shops (for food). Then, humans can evolve in a city which looks like a real city on Earth and they can interact with their environment. More specifically, our aim is to study the evolution of humans population compared to zombie’s one. Humans can kill zombies and zombies can bite humans which logically participate a lot in the evolution of populations. To brought to an end our project, we have encoded a map upon which we have placed randomly our buildings and agents, interacting there-between thanks to a lot of Python functions. The ‘class’ type of Python was really useful to encode humans and zombies along with other functions more familiar.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
