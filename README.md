@@ -1,3 +1,48 @@
+# Ropport final
+
+## I. Résumé
+
+Notre objectif était de modéliser une attaque de Zombies dans une ville remplie d’humains. Mais une ville réaliste avec des bâtiments : des habitations, des hôpitaux, des armureries et des magasins. Les humains peuvent donc récupérer les ressources dont ils ont besoins dans les bâtiments. Plus précisément, notre objectif est d’étudier l’évolution des Zombies par rapport à celle des humains.  Les humains peuvent tuer les zombies et les zombies peuvent transformer les humains, ce qui participe à l’évolution de la population humaine. Pour réaliser ce projet nous avons codé une map sur laquelle nous avons placé nos bâtiments, nos humains et nos zombies, interagissant entre eux grâce à de nombreuses fonctions. Le type Classe de Python nous a été très utile pour coder les humains et les zombies ainsi que d’autres fonctions plus connues. 
+
+## II. Introduction
+
+Nous avons voulu, pour notre projet, nous rapprocher le plus de la réalité en représentant les humains et les zombies. Même si les Zombies n'existe pas, nous nous sommes inspiré des films, séries... pour les créer et les mettre en confrontation avec les humains. Nous avons dû faire face à un problème avec les humains. Que se passe-t-il s’il meurt de faim, s’ils n’ont plus de point de vie, s’ils n’ont plus d’armes ou de munitions ? On a décidé de mettre un ordre des priorités et nous avons envisagé de nombreuses possibilités, parce que si l’humain est déjà en train de mourir de faim, est-ce qu’il doit fuir ou tuer le Zombie ? Nous avons donc essayé de nous rapprocher le plus possible de la réalité. 
+ 
+Nous sommes quatre à avoir travaillé sur le projet, Alexandre Djenane, Valentin Flageul, Martin Verrier et Astrid Ricard. Nous nous sommes réparties les tâches afin d’être plus efficace dans notre travail. 
+
+## III. Présentation de la thématique
+
+L’ensemble de notre projet repose sur des notions fondamentales  
+Tout d’abord, nous avons eu besoin des bases de python que nous avons vu au premier semestre pour la réalisation de notre projet : 
+Expressions et Fonctions : la définition d’une fonction, la sémantique, les types d’expression (simples : entiers, réels, booléens, chaînes ; et composées), les opérateurs informatiques... 
+Fonctions et alternatives : if/else 
+Répétitions et Boucles : while, for, simulation de boucle, print... 
+Chaînes de caractères : intervalles, itération... 
+Listes : définitions, transformation de listes, opérations diverses... 
+Ensembles et Dictionnaires : opérations de base, Itération sur les ensembles et les dictionnaires, ils nous ont surtout été utile lors de la création de nos classes. 
+ 
+Cependant, nous avons dû pousser un peu nos connaissances afin de créer une classe, c’est-à-dire un nouveau type d’objet. Nous en avons créé deux, la classe zombies et la classe humain, qui définissent le comportement et les attributs associés aux zombies et aux humains. Dans le cadre de ses classes nous avons dû apprendre à maîtriser la variable “self” ou autrement dit le “sois même” qui nous a permis de coder des classes capables de créer des objets différents en boucle. Ensuite nous avons dû créer une map, dans ce but nous avons dû apprendre à construire des matrices avec python.  Donc pour notre map nous avons créé une matrice et nous y avons implanté nos agents, pour cela nous avons su maîtriser les “import”. Pour mieux comprendre ces fonctions nous avons fait appel à l’aide d’amis qui sont en 4A à Polytech.
+
+De plus, hors contexte scientifique, il fallait également que chaque personne du groupe soit coordonnée avec les autres afin d’optimiser au mieux notre efficacité. En effet, parfois en mettant les programmes en commun ils ne marchaient plus car les structures des algorithmes n’étaient pas adaptés pour pouvoir fonctionner entre eux. Cela représente une autre notion fondamentale de notre travail qui a été d’avoir une bonne coordination en parlant beaucoup entre nous pour savoir exactement ce que faisait chaque membre du groupe afin d’avoir une vision globale de ce nous faisions tous et d’avoir un aperçu de notre rendu final pour éviter tout dérapage ou une mauvaise compréhension de ce que nous recherchions.
+
+Finalement, une dernière notion importante sur laquelle reposait notre travail était celle d’espacer au mieux notre travail et de ne pas travailler “en bloc” (en plusieurs heures d’affilé mais rarement). En effet, espacer notre travail (en travaillant chez nous également) nous permettait de prendre plusieurs fois du recul et remettre à chaque fois en question ce que nous faisons (de bien/mal). De plus, lorsque que la source d’un bug nous échappe pendant 2h, il est nécessaire de revenir plus tard avec un regard nouveau.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Cahier des charges: EPIDEMIE DE ZOMBIES
 
 Verrier Martin Ricard Astrid Flageul Valentin Djenane Alexandre
