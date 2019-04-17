@@ -168,7 +168,7 @@ def move(self, carte) :
 
 La représentation de l’épidémie de Zombie se fait sur une carte, dont l'affichage repose sur le parcour de la carte, de l'interprétation de chaque case puis du renvoie des donnée, etc.
 
-Nous avons utilisé un mode de programmation, appelé “par valeur”, qui consiste à créer des listes qui contiennent les agents et d’appliquer les fonctions à partir de ces listes.*u
+Nous avons utilisé un mode de programmation, appelé “par valeur”, qui consiste à créer des listes qui contiennent les agents et d’appliquer les fonctions à partir de ces listes.
 
 Pour cela nous avons dû d’abord créer un support pour nos agents, qui soit facile à manipuler. Nous avons donc fait une carte sous forme de tableau dans laquelle on stocke nos différents objets. 
 
@@ -176,14 +176,9 @@ Nous l’avons initialisé par une liste de liste avec que des zéros dont les d
 
 return [[0 for j in range(y)] for i in range(x)]
 
-Cette liste n’est créée qu’une fois, ce qui nous permet de ne pas prendre trop de mémoire, et donc sans risque de faire planter l’ordinateur.
-
-Ensuite, on implante ensuite un nombre définit de bâtiments. Pour cela, on parcourt la carte et on les insère aléatoirement avec chacun un type spécifique: hôpital, magasin, maison ou armurerie. Chaque fois qu’ils sont insérés on leur donne une “place_matrice” et on les ajoute à la liste des bâtiments. Ils ont tous la même structure: c’est un amas d’objet de classe “Bâtiment” ayant une méthode définissant leur type, et sont dotés d’une unique porte. Cette porte sert d’interface entre les agents de type “Humain” et les bâtiments. Elle contient à elle seule toutes les informations sur l’état de l’infrastructure, c’est-à-dire ses ressources disponibles que les humains convoitent, comme la nourriture, les munitions ou les médicaments.
+Ensuite, on implante un nombre définit de bâtiments. Pour cela, on parcourt la carte et on les insère aléatoirement avec chacun un type spécifique: hôpital, magasin, maison ou armurerie. Chaque fois qu’ils sont insérés on leur donne une “place_matrice” et on les ajoute à la liste des bâtiments. Ils ont tous la même structure: c’est un amas d’objet de classe “Bâtiment” ayant une méthode définissant leur type, et sont dotés d’une unique porte. Cette porte sert d’interface entre les agents de type “Humain” et les bâtiments. Elle contient à elle seule toutes les informations sur l’état de l’infrastructure, c’est-à-dire ses ressources disponibles que les humains convoitent, comme la nourriture, les munitions ou les médicaments.
 	
 Pour finir, on ajoute les deux types d’agents, qui sont les objets de classe “Humain” et “Zombie”. Cette implémentation se fait également de manière aléatoire, avec néanmoins un contrôle sur le nombre d’agents à implanter. Ce nombre est défini dans les paramètres généraux. Chaque fois qu’un agent est créé, nous lui donnons une “place_matrice” et l’ajoutons à la liste correspondant à sa classe.
-
-Pour faciliter la manipulation et la lisibilité de cette liste de liste par la suite, on la transforme en un tableau de type array grâce à la fonction array() du module scipy.
-
 
 
 ### C/ Dynamique
@@ -201,7 +196,7 @@ Nous avons alors dû importer matplotlib.animation afin d’obtenir une figure q
 L’objectif est alors d’obtenir une carte avec des cases colorées qui permet de différencier les différents agents et types de bâtiments.
 Afin d’en arriver là, il faut tout d’abord créer une fonction qui sert à créer une carte remplie de chiffres à partir de notre carte remplie d’agents. En effet, matplotlib ne pouvant afficher et différencier des classes, il faut donc les remplacer par des chiffres avec un chiffre différent pour chaque classe.
 
-Vient ensuite la fonction qui permet de paramétrer la figure et l’image qui seront utilisées par la suite pour l’animation. Dans cette fonction seront spécifiés la taille de la figure, la couleur de chaque élément ( Zombie, Humain, Bâtiments ) et aussi par exemple la présence ou non d’une légende permettant d’associer les couleurs aux agents ou aux bâtiments correspondants.
+Vient ensuite la fonction qui permet de paramétrer la figure et l’image qui seront utilisées par la suite pour l’animation. Dans cette fonction seront spécifiés la taille de la figure et la couleur de chaque élément ( Zombie, Humain, Bâtiments ).
 
 La liste des couleurs choisies pour représenter les agents est définie de la manière suivante : 
 cmap=mpl.colors.ListedColormap(["White","Red","Green","saddlebrown","grey","royalblue","olive","salmon"])
@@ -251,8 +246,8 @@ Ces deux courbes nous montrent l’évolution des deux populations lorsque l’o
 Là où les humains éradiquent rapidement les zombies sur la courbe 5, ils ont en revanche beaucoup plus de pertes sur la courbe 6 pour au final atteindre une stabilité entre les humains et les zombies.
 On pourrait alors imaginer que si l’on baissait encore plus la précision, les humains viendraient assez rapidement à être éradiqués par les zombies.
 
-
-##############faire probleme fonction moyenne
+Par ailleurs nous souhaitions coder une fonction nous perméttant de calculer la population moyenne d'Humain et de Zombie sur n simulations afin de pouvoir étudier le model sans que les paramètres aléatoires influent sur les résultats.
+Cependant nous avons fait face à un problème et par soucis de temps n'avons pas pu finaliser cette fonction.
 
 ## VI. Summary
 
@@ -294,9 +289,6 @@ Zombie
 ## ANNEXE 2
 
 cf autre page github ANNEXE 2
-
-
-
 
 
 
