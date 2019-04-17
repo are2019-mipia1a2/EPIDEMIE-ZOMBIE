@@ -166,9 +166,9 @@ def move(self, carte) :
 ### B/ Environnement
 
 
-La représentation de l’épidémie de Zombie se fait sur une carte, dont l'affichage repose sur le parcour de la carte, de l'interprétation de chaque case puis du envoie des donnée, etc.
+La représentation de l’épidémie de Zombie se fait sur une carte, dont l'affichage repose sur le parcour de la carte, de l'interprétation de chaque case puis du renvoie des donnée, etc.
 
-Nous avons utilisé un mode de programmation, appelé “par valeur”, qui consiste à créer des listes qui contiennent les agents et d’appliquer les fonctions à partir de ces listes.
+Nous avons utilisé un mode de programmation, appelé “par valeur”, qui consiste à créer des listes qui contiennent les agents et d’appliquer les fonctions à partir de ces listes.*u
 
 Pour cela nous avons dû d’abord créer un support pour nos agents, qui soit facile à manipuler. Nous avons donc fait une carte sous forme de tableau dans laquelle on stocke nos différents objets. 
 
@@ -252,7 +252,7 @@ Là où les humains éradiquent rapidement les zombies sur la courbe 5, ils ont 
 On pourrait alors imaginer que si l’on baissait encore plus la précision, les humains viendraient assez rapidement à être éradiqués par les zombies.
 
 
-
+##############faire probleme fonction moyenne
 
 ## VI. Summary
 
