@@ -2,7 +2,9 @@
 
 ## I. Résumé
 
-Notre objectif était de modéliser une attaque de Zombies dans une ville remplie d’humains. Mais une ville réaliste avec des bâtiments : des habitations, des hôpitaux, des armureries et des magasins. Les humains peuvent donc récupérer les ressources dont ils ont besoins dans les bâtiments. Plus précisément, notre objectif est d’étudier l’évolution des Zombies par rapport à celle des humains.  Les humains peuvent tuer les zombies et les zombies peuvent transformer les humains, ce qui participe à l’évolution de la population humaine. Pour réaliser ce projet nous avons codé une map sur laquelle nous avons placé nos bâtiments, nos humains et nos zombies, interagissant entre eux grâce à de nombreuses fonctions. Le type Classe de Python nous a été très utile pour coder les humains et les zombies ainsi que d’autres fonctions plus connues. 
+Notre objectif était de modéliser une attaque de Zombies dans une ville remplie d’humains. Nous avons donc décidé de coder une ville avec des bâtiments : des habitations, des hôpitaux, des armureries et des magasins, pour que notre model se rapproche le plus possible de la réalité. Les humains peuvent alors récupérer les ressources dont ils ont besoins dans ces bâtiments. A travers cette modélisation, notre objectif est d’étudier l’évolution des Zombies par rapport à celle des humains.  Les humains pouvant tuer les zombies et les zombies pouvant transformer les humains en zombie, ce model permet d'analyser une evolution des populations avec un grand nombre de scénario.
+
+Pour réaliser ce projet nous avons codé une map sur laquelle nous avons placé nos bâtiments, nos humains et nos zombies, interagissant entre eux grâce à de nombreuses fonctions. Le type Classe de Python nous a été très utile pour coder les humains et les zombies ainsi que d’autres fonctions plus connues. 
 
 ## II. Introduction
 
@@ -21,9 +23,9 @@ Chaînes de caractères : intervalles, itération...
 Listes : définitions, transformation de listes, opérations diverses... 
 Ensembles et Dictionnaires : opérations de base, Itération sur les ensembles et les dictionnaires, ils nous ont surtout été utile lors de la création de nos classes. 
  
-Cependant, nous avons dû pousser un peu nos connaissances afin de créer une classe, c’est-à-dire un nouveau type d’objet. Nous en avons créé deux, la classe zombies et la classe humain, qui définissent le comportement et les attributs associés aux zombies et aux humains. Dans le cadre de ses classes nous avons dû apprendre à maîtriser la variable “self” ou autrement dit le “sois même” qui nous a permis de coder des classes capables de créer des objets différents en boucle. Ensuite nous avons dû créer une map, dans ce but nous avons dû apprendre à construire des matrices avec python.  Donc pour notre map nous avons créé une matrice et nous y avons implanté nos agents, pour cela nous avons su maîtriser les “import”.
+Cependant, nous avons dû pousser un peu nos connaissances afin de créer une classe, c’est-à-dire un nouveau type d’objet. Nous en avons créé trois, la classe zombies et la classe humain, qui définissent le comportement et les attributs associés aux zombies et aux humains, et la classe batiment qui nous permet de créer des batiments avec des dimensions aléatoire dans un intervalle fixé. Dans le cadre de ces classes nous avons dû apprendre à maîtriser la variable “self” ou autrement dit le “sois même” qui nous a permis de coder des classes capables de créer des objets différents en boucle. Ensuite nous avons dû créer une map, dans ce but nous avons dû apprendre à construire des matrices avec python.  Donc pour notre map nous avons créé une matrice et nous y avons implanté nos agents, pour cela nous avons su maîtriser les “import”.
 
-De plus, hors contexte scientifique, il fallait également que chaque personne du groupe soit coordonnée avec les autres afin d’optimiser au mieux notre efficacité. En effet, parfois en mettant les programmes en commun ils ne marchaient plus car les structures des algorithmes n’étaient pas adaptés pour pouvoir fonctionner entre eux. Cela représente une autre notion fondamentale de notre travail qui a été d’avoir une bonne coordination en parlant beaucoup entre nous pour savoir exactement ce que faisait chaque membre du groupe afin d’avoir une vision globale de ce nous faisions tous et d’avoir un aperçu de notre rendu final pour éviter tout dérapage ou une mauvaise compréhension de ce que nous recherchions.
+De plus, hors contexte scientifique, il fallait également que chaque personne du groupe soit coordonnée avec les autres afin d’optimiser au mieux notre efficacité. En effet, parfois en mettant les programmes en commun ils ne marchaient plus car les structures des algorithmes n’étaient pas adaptés pour pouvoir fonctionner entre eux. Cela représente une autre notion fondamentale de notre travail qui a été d’avoir une bonne coordination en parlant beaucoup entre nous pour savoir exactement ce que faisait chaque membre du groupe afin d’avoir une vision globale de ce que nous faisions tous et d’avoir un aperçu de notre rendu final pour éviter tout dérapage ou une mauvaise compréhension de ce que nous recherchions.
 
 Finalement, une dernière notion importante sur laquelle reposait notre travail était celle d’espacer au mieux notre travail et de ne pas travailler “en bloc”. En effet, espacer notre travail, à la fac comme chez nous, nous permettait de prendre plusieurs fois du recul et remettre à chaque fois en question ce que nous faisons. De plus, lorsque que la source d’un bug nous échappe pendant 2h, il est nécessaire de revenir plus tard avec un regard nouveau.
 
@@ -31,7 +33,7 @@ Finalement, une dernière notion importante sur laquelle reposait notre travail 
 
 Nous avons décidé pour l’écriture du code de diviser l’algorithme en 2 grandes parties : L’environnement et les agents.
 
-L’environnement est une petite ville comprenant plusieurs types de bâtiments : les maisons (pour se réfugier), les hôpitaux (pour se soigner), les armureries (pour avoir des munitions et tuer les zombies), les magasins (pour la nourriture).
+L’environnement est une petite ville comprenant plusieurs types de bâtiments : les maisons (pour se réfugier et récupérer des ressources), les hôpitaux (pour se soigner), les armureries (pour avoir des munitions et tuer les zombies), les magasins (pour la nourriture).
 
 Les agents sont les zombies et les humains ayant plusieurs caractéristiques, plusieurs comportements et ils ont été créés via les classes, nouveauté que nous avons du nous approprier pour coder tout ce que l’on voulait réaliser.
 
@@ -57,7 +59,7 @@ Alexandre : Agents, Environnement, Liste des paramètres.
 #### 1. Les humains
 
 La classe humain contient beaucoup de caractéristiques et de comportements afin de rapprocher leur fonctionnement du notre. Les humains peuvent donc se déplacer, sentir la présence des zombies, tuer les zombies, ils ont aussi des points de vie et une barre de faim, ils ont besoin de se ravitailler (nourritures, munitions, médicaments), et ils peuvent se déplacer selon leur caractéristiques actuelles (s’il y a un zombie à proximité, s’il a besoin de se ravitailler, il se déplace vers une porte, …)
-A l’initialisation, l’humain possède un compteur de “faim” qui prend une valeur défini dans les paramètre généraux, des PDV (Points DE Vie) prenant une valeur entre 40 et 100 choisie aléatoirement, on suppose qu’ils n’ont pas encore faim et que dans leur sac ils ne possèdent que 3 munitions maximum.
+A l’initialisation, l’humain possède un compteur de “faim” qui prend une valeur défini dans les paramètres généraux, des PDV (Points De Vie) prenant une valeur entre 40 et 100 choisie aléatoirement, on suppose qu’ils n’ont pas encore faim et que dans leur sac ils possèdent un nombre de munitions, de médicaments et de nourriture défini dans les paramètres généraux.
 
 	def __init__(self):
 	   self.nom = Humain.num_humain
@@ -66,15 +68,15 @@ A l’initialisation, l’humain possède un compteur de “faim” qui prend un
 		   self.pdv=random.randint(40,100)
 		   self.faim=faim_humain
 		   self.compteur_faim=0
-	   self.sac={"Munitions":4,"Médicaments":0,"Nourriture":0}
+	   self.sac={"Munitions":munition_début,"Médicaments":médicaments_début,"Nourriture":nourriture_début}
 
 Le compteur de temps va servir à compter le temps qu’il passe en état “a faim”
 
 
-On crée différentes fonctions pour définir leur comportements et leur caractéristiques: 
+On a ensuite crée différentes fonctions pour définir leur comportements et leur caractéristiques: 
 
 
-Tout d’abord, on a créé une fonction pour que les humains sentent la présence des zombies dans un rayon de 10, en rendant les coordonnées du zombie le plus proche grâce à la formule mathématique donnant la distance entre deux points.
+Tout d’abord, on a créé une fonction pour que les humains sentent la présence des zombies dans un certains rayon modifiable dans les paramètres généraux, en rendant les coordonnées du zombie le plus proche grâce à la formule mathématique donnant la distance entre deux points.
 
 math.sqrt((i_zombieTempo - i_humain)**2+(j_zombieTempo - j_humain)**2)
 Avec  i_zombieTempo,j_zombieTempo  les coordonnées d’un zombie et i_humain,j_humain  les coordonnées d’un humain.
@@ -92,7 +94,7 @@ Ensuite on a codé une fonction Pdv : ses points de vie diminuent au fur et à m
                           	On réinitialise le compteur faim à 0
       	Si ses pdv<=80 et il a des médicaments :
                 	Son sac perd 1 de médicament
-                	Ses pdv augmentent de 20
+                	Ses pdv augmentent de "pdv_rendus"
       	Si ses pdv==0 :
                 	L’humain se transforme en zombie
  	
@@ -100,7 +102,7 @@ Puis une fonction shoot qui lui permet de tuer des zombies (ici très simplifié
  
 	def shoot(self, carte) :
 	Si l’humain possède au moins une munition :
-		Une chance sur 2 de tuer le zombie et l’humain perd une munition
+		Une chance de tuer le zombie et l’humain perd une munition	#chance défini dans les paramètres
  
 Nous avons aussi créé les fonctions « ravitaillement »  et « run » qui prennent en compte de nombreux paramètres comme ce que l’humain avait dans son sac, ce qui lui manquait, s’il devait se diriger vers un type de bâtiment en priorité (pour ses points de vie par exemple), etc. En version très simplifiée :
  
@@ -130,7 +132,7 @@ Zombie.num_zombie += 1
 
    
 
-Puis, on crée une classe « sentir » servant à trouver les coordonnées de l’humain le plus proche en utilisant la formule mathématique de la distance entre deux points :
+Puis, on crée une fonction « sentir » servant à trouver les coordonnées de l’humain le plus proche en utilisant la formule mathématique de la distance entre deux points :
 
 
 min(math.sqrt((i_humain - i_zombie)**2+(j_humain - j_zombie)**2)
@@ -151,15 +153,15 @@ def move(self, carte) :
 
         
 
-Sinon :
+	Sinon :
 
                    Faire déplacer le zombie vers l’humain
 
                    Si il est à côté de lui :
 
-                             Une chance sur deux de le tuer
+                             Une chance de le tuer			#chance défini dans les paramètres
 
-                             Une chance sur deux de le transformer en zombie
+                             Une chance de le transformer en zombie
 
 ### B/ Environnement
 
