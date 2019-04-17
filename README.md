@@ -2,15 +2,15 @@
 
 ## I. Résumé
 
-Notre objectif était de modéliser une attaque de Zombies dans une ville remplie d’humains. Nous avons donc décidé de coder une ville avec des bâtiments : des habitations, des hôpitaux, des armureries et des magasins, pour que notre model se rapproche le plus possible de la réalité. Les humains peuvent alors récupérer les ressources dont ils ont besoins dans ces bâtiments. A travers cette modélisation, notre objectif est d’étudier l’évolution des Zombies par rapport à celle des humains.  Les humains pouvant tuer les zombies et les zombies pouvant transformer les humains en zombie, ce model permet d'analyser une evolution des populations avec un grand nombre de scénario.
+Notre objectif était de modéliser une attaque de Zombies dans une ville remplie d’humains. Nous avons donc décidé de coder une ville avec des bâtiments : des habitations, des hôpitaux, des armureries et des magasins, pour que notre model se rapproche le plus possible de la réalité. Les humains peuvent alors récupérer les ressources dont ils ont besoin dans ces bâtiments. A travers cette modélisation, notre objectif est d’étudier l’évolution des Zombies par rapport à celle des humains.  Les humains pouvant tuer les zombies et les zombies pouvant transformer les humains en zombie, ce model permet d'analyser une évolution des populations avec un grand nombre de scénario.
 
 Pour réaliser ce projet nous avons codé une map sur laquelle nous avons placé nos bâtiments, nos humains et nos zombies, interagissant entre eux grâce à de nombreuses fonctions. Le type Classe de Python nous a été très utile pour coder les humains et les zombies ainsi que d’autres fonctions plus connues. 
 
 ## II. Introduction
 
-Nous avons voulu, pour notre projet, nous rapprocher le plus de la réalité en représentant les humains et les zombies. Même si les Zombies n'existe pas, nous nous sommes inspiré des films, séries... pour les créer et les mettre en confrontation avec les humains. Nous avons dû faire face à un problème avec les humains. Que se passe-t-il s’il meurt de faim, s’ils n’ont plus de point de vie, s’ils n’ont plus d’armes ou de munitions ? On a décidé de mettre un ordre des priorités et nous avons envisagé de nombreuses possibilités, parce que si l’humain est déjà en train de mourir de faim, est-ce qu’il doit fuir ou tuer le Zombie ? Nous avons donc essayé de nous rapprocher le plus possible de la réalité. 
+Nous avons voulu, pour notre projet, nous rapprocher le plus de la réalité en représentant les humains et les zombies. Même si les Zombies n'existent pas, nous nous sommes inspirés des films, séries... pour les créer et les mettre en confrontation avec les humains. Nous avons dû faire face à un problème avec les humains. Que se passe-t-il s’ils meurent de faim, s’ils n’ont plus de point de vie, s’ils n’ont plus d’armes ou de munitions ? On a décidé de mettre un ordre des priorités et nous avons envisagé de nombreuses possibilités, parce que si l’humain est déjà en train de mourir de faim, est-ce qu’il doit fuir ou tuer le Zombie ? Nous avons donc essayé de nous rapprocher le plus possible de la réalité. 
  
-Nous sommes quatre à avoir travaillé sur le projet, Alexandre Djenane, Valentin Flageul, Martin Verrier et Astrid Ricard. Nous nous sommes réparties les tâches afin d’être plus efficace dans notre travail. 
+Nous sommes quatre à avoir travaillé sur le projet, Alexandre Djenane, Valentin Flageul, Martin Verrier et Astrid Ricard. Nous nous sommes réparties les tâches afin d’être plus efficaces  dans notre travail. 
 
 ## III. Présentation de la thématique
 
@@ -23,9 +23,9 @@ Chaînes de caractères : intervalles, itération...
 Listes : définitions, transformation de listes, opérations diverses... 
 Ensembles et Dictionnaires : opérations de base, Itération sur les ensembles et les dictionnaires, ils nous ont surtout été utile lors de la création de nos classes. 
  
-Cependant, nous avons dû pousser un peu nos connaissances afin de créer une classe, c’est-à-dire un nouveau type d’objet. Nous en avons créé trois, la classe zombies et la classe humain, qui définissent le comportement et les attributs associés aux zombies et aux humains, et la classe batiment qui nous permet de créer des batiments avec des dimensions aléatoire dans un intervalle fixé. Dans le cadre de ces classes nous avons dû apprendre à maîtriser la variable “self” ou autrement dit le “sois même” qui nous a permis de coder des classes capables de créer des objets différents en boucle. Ensuite nous avons dû créer une map, dans ce but nous avons dû apprendre à construire des matrices avec python.  Donc pour notre map nous avons créé une matrice et nous y avons implanté nos agents, pour cela nous avons su maîtriser les “import”.
+Cependant, nous avons dû pousser un peu nos connaissances afin de créer une classe, c’est-à-dire un nouveau type d’objet. Nous en avons créé trois, la classe zombies et la classe humain, qui définissent le comportement et les attributs associés aux zombies et aux humains, et la classe bâtiments qui nous permet de créer des bâtiments avec des dimensions aléatoires dans un intervalle fixé. Dans le cadre de ces classes nous avons dû apprendre à maîtriser la variable “self” ou autrement dit le “soi-même” qui nous a permis de coder des classes capables de créer des objets différents en boucle. Ensuite, nous avons dû créer une map. Dans ce but nous avons dû apprendre à construire des matrices avec python.  Donc pour notre map nous avons créé une matrice et nous y avons implanté nos agents, pour cela nous avons su maîtriser les “import”.
 
-De plus, hors contexte scientifique, il fallait également que chaque personne du groupe soit coordonnée avec les autres afin d’optimiser au mieux notre efficacité. En effet, parfois en mettant les programmes en commun ils ne marchaient plus car les structures des algorithmes n’étaient pas adaptés pour pouvoir fonctionner entre eux. Cela représente une autre notion fondamentale de notre travail qui a été d’avoir une bonne coordination en parlant beaucoup entre nous pour savoir exactement ce que faisait chaque membre du groupe afin d’avoir une vision globale de ce que nous faisions tous et d’avoir un aperçu de notre rendu final pour éviter tout dérapage ou une mauvaise compréhension de ce que nous recherchions.
+De plus, hors contexte scientifique, il fallait également que chaque personne du groupe soit coordonnée avec les autres afin d’optimiser au mieux notre efficacité. En effet, parfois en mettant les programmes en commun ils ne marchaient plus car les structures des algorithmes n’étaient pas adaptées pour pouvoir fonctionner entre elles. Cela représente une autre notion fondamentale de notre travail qui a été d’avoir une bonne coordination en parlant beaucoup entre nous pour savoir exactement ce que faisait chaque membre du groupe afin d’avoir une vision globale de ce que nous faisions tous et d’avoir un aperçu de notre rendu final pour éviter tout dérapage ou une mauvaise compréhension de ce que nous recherchions.
 
 Finalement, une dernière notion importante sur laquelle reposait notre travail était celle d’espacer au mieux notre travail et de ne pas travailler “en bloc”. En effet, espacer notre travail, à la fac comme chez nous, nous permettait de prendre plusieurs fois du recul et remettre à chaque fois en question ce que nous faisons. De plus, lorsque que la source d’un bug nous échappe pendant 2h, il est nécessaire de revenir plus tard avec un regard nouveau.
 
@@ -35,9 +35,9 @@ Nous avons décidé pour l’écriture du code de diviser l’algorithme en 2 gr
 
 L’environnement est une petite ville comprenant plusieurs types de bâtiments : les maisons (pour se réfugier et récupérer des ressources), les hôpitaux (pour se soigner), les armureries (pour avoir des munitions et tuer les zombies), les magasins (pour la nourriture).
 
-Les agents sont les zombies et les humains ayant plusieurs caractéristiques, plusieurs comportements et ils ont été créés via les classes, nouveauté que nous avons du nous approprier pour coder tout ce que l’on voulait réaliser.
+Les agents sont les zombies et les humains ayant plusieurs caractéristiques, plusieurs comportements et ils ont été créés via les classes, nouveauté que nous avons dues nous approprier pour coder tout ce que l’on voulait réaliser.
 
-Pour cela, nous avons divisé notre groupe de 4 en 2 groupes de 2 : Martin avec Alexandre et Valentin avec Astrid. Martin et Alexandre se sont occupés de la création des classes et du comportement des agents, ce qui était une des parties les plus longues du programme, notamment parce-qu’on a décidé de réaliser des agents plutôt complets.
+Pour cela, nous avons divisé notre groupe de 4 en 2 groupes de 2 : Martin avec Alexandre et Valentin avec Astrid. Martin et Alexandre se sont occupés de la création des classes et du comportement des agents, ce qui était une des parties les plus longues du programme, notamment parce qu’on a décidé de réaliser des agents plutôt complets.
 
 Valentin et Astrid se sont, eux, occupés de l’environnement, de la dynamique et du rendu visuel ainsi que la création des courbes en faisant varier les paramètres.
 
@@ -58,8 +58,8 @@ Alexandre : Agents, Environnement, Liste des paramètres.
 
 #### 1. Les humains
 
-La classe humain contient beaucoup de caractéristiques et de comportements afin de rapprocher leur fonctionnement du notre. Les humains peuvent donc se déplacer, sentir la présence des zombies, tuer les zombies, ils ont aussi des points de vie et une barre de faim, ils ont besoin de se ravitailler (nourritures, munitions, médicaments), et ils peuvent se déplacer selon leur caractéristiques actuelles (s’il y a un zombie à proximité, s’il a besoin de se ravitailler, il se déplace vers une porte, …)
-A l’initialisation, l’humain possède un compteur de “faim” qui prend une valeur défini dans les paramètres généraux, des PDV (Points De Vie) prenant une valeur entre 40 et 100 choisie aléatoirement, on suppose qu’ils n’ont pas encore faim et que dans leur sac ils possèdent un nombre de munitions, de médicaments et de nourriture défini dans les paramètres généraux.
+La classe humain contient beaucoup de caractéristiques et de comportements afin de rapprocher leur fonctionnement du notre. Les humains peuvent donc se déplacer, sentir la présence des zombies, tuer les zombies. Ils ont aussi des points de vie et une barre de faim, ils ont besoin de se ravitailler (nourritures, munitions, médicaments), et ils peuvent se déplacer selon leurs caractéristiques actuelles (s’il y a un zombie à proximité, s’il a besoin de se ravitailler, il se déplace vers une porte, …)
+A l’initialisation, l’humain possède un compteur de “faim” qui prend une valeur définie dans les paramètres généraux, des PDV (Points De Vie) prenant une valeur entre 40 et 100 choisie aléatoirement. On suppose qu’ils n’ont pas encore faim et que dans leur sac ils possèdent un nombre de munitions, de médicaments et de nourriture défini dans les paramètres généraux.
 
 	def __init__(self):
 	   self.nom = Humain.num_humain
@@ -73,10 +73,10 @@ A l’initialisation, l’humain possède un compteur de “faim” qui prend un
 Le compteur de temps va servir à compter le temps qu’il passe en état “a faim”
 
 
-On a ensuite crée différentes fonctions pour définir leur comportements et leur caractéristiques: 
+On a ensuite crée différentes fonctions pour définir leurs comportements et leurs caractéristiques: 
 
 
-Tout d’abord, on a créé une fonction pour que les humains sentent la présence des zombies dans un certains rayon modifiable dans les paramètres généraux, en rendant les coordonnées du zombie le plus proche grâce à la formule mathématique donnant la distance entre deux points.
+Tout d’abord, on a créé une fonction pour que les humains sentent la présence des zombies dans un certain rayon modifiable dans les paramètres généraux, en rendant les coordonnées du zombie le plus proche grâce à la formule mathématique donnant la distance entre deux points.
 
 math.sqrt((i_zombieTempo - i_humain)**2+(j_zombieTempo - j_humain)**2)
 Avec  i_zombieTempo,j_zombieTempo  les coordonnées d’un zombie et i_humain,j_humain  les coordonnées d’un humain.
@@ -166,17 +166,17 @@ def move(self, carte) :
 ### B/ Environnement
 
 
-La représentation de l’épidémie de Zombie se fait sur une carte, dont l'affichage repose sur le parcour de la carte, de l'interprétation de chaque case puis du renvoie des donnée, etc.
+La représentation de l’épidémie de Zombie se fait sur une carte, dont l'affichage repose sur le parcours de la carte, de l'interprétation de chaque case puis du renvoi des données, etc.
 
 Nous avons utilisé un mode de programmation, appelé “par valeur”, qui consiste à créer des listes qui contiennent les agents et d’appliquer les fonctions à partir de ces listes.
 
 Pour cela nous avons dû d’abord créer un support pour nos agents, qui soit facile à manipuler. Nous avons donc fait une carte sous forme de tableau dans laquelle on stocke nos différents objets. 
 
-Nous l’avons initialisé par une liste de liste avec que des zéros dont les dimensions sont mis dans les paramètres généraux :
+Nous l’avons initialisé par une liste de listes avec que des zéros dont les dimensions sont mises dans les paramètres généraux :
 
 return [[0 for j in range(y)] for i in range(x)]
 
-Ensuite, on implante un nombre définit de bâtiments. Pour cela, on parcourt la carte et on les insère aléatoirement avec chacun un type spécifique: hôpital, magasin, maison ou armurerie. Chaque fois qu’ils sont insérés on leur donne une “place_matrice” et on les ajoute à la liste des bâtiments. Ils ont tous la même structure: c’est un amas d’objet de classe “Bâtiment” ayant une méthode définissant leur type, et sont dotés d’une unique porte. Cette porte sert d’interface entre les agents de type “Humain” et les bâtiments. Elle contient à elle seule toutes les informations sur l’état de l’infrastructure, c’est-à-dire ses ressources disponibles que les humains convoitent, comme la nourriture, les munitions ou les médicaments.
+Ensuite, on implante un nombre défini de bâtiments. Pour cela, on parcourt la carte et on les insère aléatoirement avec chacun un type spécifique : hôpital, magasin, maison ou armurerie. Chaque fois qu’ils sont insérés on leur donne une “place_matrice” et on les ajoute à la liste des bâtiments. Ils ont tous la même structure : c’est un amas d’objets de classe “Bâtiment” ayant une méthode définissant leur type, et sont dotés d’une unique porte. Cette porte sert d’interface entre les agents de type “Humain” et les bâtiments. Elle contient à elle seule toutes les informations sur l’état de l’infrastructure, c’est-à-dire ses ressources disponibles que les humains convoitent, comme la nourriture, les munitions ou les médicaments.
 	
 Pour finir, on ajoute les deux types d’agents, qui sont les objets de classe “Humain” et “Zombie”. Cette implémentation se fait également de manière aléatoire, avec néanmoins un contrôle sur le nombre d’agents à implanter. Ce nombre est défini dans les paramètres généraux. Chaque fois qu’un agent est créé, nous lui donnons une “place_matrice” et l’ajoutons à la liste correspondant à sa classe.
 
@@ -186,7 +186,7 @@ Pour finir, on ajoute les deux types d’agents, qui sont les objets de classe �
 #### 1. Structure
 
 La dynamique est le troisième et dernier fichier de notre code. Cette partie réunie et appelle toutes les fonctions, classes et objets créés précédemment et lance la simulation. Par conséquent, elle contient également les fonctions graphiques, ainsi que celles gérant les courbes de suivis.
-On parcourt l’ensemble des objets de la carte et pour chaque objet, on appelle l’ensemble des méthodes qu’il possède. C’est donc les méthodes des objets qui “décident” si elles doivent s’activer et non la dynamique. 
+On parcourt l’ensemble des objets de la carte et pour chaque objet, on appelle l’ensemble des méthodes qu’il possède. Ce sont donc les méthodes des objets qui “décident” si elles doivent s’activer et non la dynamique. 
 
 #### 2. Affichage
 
@@ -202,13 +202,13 @@ La liste des couleurs choisies pour représenter les agents est définie de la m
 cmap=mpl.colors.ListedColormap(["White","Red","Green","saddlebrown","grey","royalblue","olive","salmon"])
 Puis vient la liste des agents qui seront possiblement présents sur la carte :
 bounds=(0, 1, 2, 3.1, 3.2, 3.3, 3.4, 3.5, 4)   
-Ici, chaque chiffre correspond à un élément, les ‘0’ représentent par exemple le vide, les ‘1’ les humains, etc
-Il faut alors associer ces deux listes pour que chaque éléments de mêmes indices pour ces deux listes, soient associés ensemble ce qui se fait de la façon suivante :
+Ici, chaque chiffre correspond à un élément, les ‘0’ représentent par exemple le vide, les ‘1’ les humains, etc.
+Il faut alors associer ces deux listes pour que tous les éléments de mêmes indices pour ces deux listes, soient associés ensemble ce qui se fait de la façon suivante :
 norm = mpl.colors.BoundaryNorm(bounds,cmap.N)
 
 Une fois la figure et l’image définies, une fonction “update” sert à définir le contenu de chaque simulation à savoir le déplacement des agents selon les comportements définis.
 
-Pour finir, l’animation se finalise par une fonction permettant de définir le nombre de simulations, le temps entre chaques simulations, la figure et l’image à utiliser pour ces simulations, etc.
+Pour finir, l’animation se finalise par une fonction permettant de définir le nombre de simulations, le temps entre chaque simulation, la figure et l’image à utiliser pour ces simulations, etc.
 
 ani = animation.FuncAnimation(fig, update, frames = range(nb_simulations), interval = 10  , repeat = False )
 plt.show()
@@ -227,31 +227,31 @@ Ici nous avons alors en abscisse x1 qui représente le nombre d’itérations et
 
 #### 3. Analyse des résultats
 
-Les courbes de suivi nous ont alors permis d’étudier l’évolution des deux populations lorsque l’on joue sur les différents paramètres à notre disposition ( Populations de départ, Nombre de balles par humain au départ, Précision du tir des humain, etc ).
+Les courbes de suivi nous ont alors permis d’étudier l’évolution des deux populations lorsque l’on joue sur les différents paramètres à notre disposition ( Populations de départ, Nombre de balles par humain au départ, Précision du tir des humains, etc. ).
 
 On peut alors remarquer de nombreuses disparités dans les évolutions des deux populations avec néanmoins des similitudes comme par exemple le fort pic de mortalité des zombies lors de la première simulation, cela étant dû au fait que certains zombies commencent la simulation dans le champ de tirs des humains qui les tuent alors dès la première simulation.
-Nous avons alors retenu quelques paramètres qui nous semblaient intéressants à faire varier afin d’observer des résultats variables dans le devenir des agents en fonction de ces modifications. ( Courbes en Annexe 2 ) 
+Nous avons alors retenu quelques paramètres qui nous semblaient intéressants à faire varier afin d’observer des résultats variables dans le devenir des agents en fonction de ces modifications. (Courbes en Annexe 2 ) 
 
 - Courbes 1 et 2 :  Modification des populations de départ
 Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier les populations de départ à savoir 100 humains et 50 zombies sur la courbe 1 contre 30 humains et 100 zombies sur la courbe 2.
-On remarque alors que si les humains sont présent en forte supériorité numérique au départ, il finissent assez rapidement par éradiquer quasi-totalement les zombies. 
-A l’inverse, si les zombies sont introduits en forte supériorité numérique, ils vont avoir à prendre assez vite le dessus sur les humains avant d’atteindre un état de stabilité dû au manque de rencontres entre les humains/zombies .
+On remarque alors que si les humains sont présents en forte supériorité numérique au départ, ils finissent assez rapidement par éradiquer quasi-totalement les zombies. 
+A l’inverse, si les zombies sont introduits en forte supériorité numérique, ils vont avoir à prendre assez vite le dessus sur les humains avant d’atteindre un état de stabilité dû au manque de rencontres entre les humains/zombies.
 
 - Courbes 3 et 4 :  Modification du nombre de munitions de départ
-Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier le nombre de munitions de départ avec le même nombre d’agents au départ ( 100 humains et 100 zombies ) à savoir 2 munitions pour la courbe 3 et 3 munitions pour la courbe 4.
+Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier le nombre de munitions de départ avec le même nombre d’agents au départ (100 humains et 100 zombies) à savoir 2 munitions pour la courbe 3 et 3 munitions pour la courbe 4.
 Nous pouvons alors observer une forte influence de ce paramètre sur l’évolution des populations. En effet, avec 2 munitions au départ sur la courbe 3, on remarque une évolution vers un certain équilibre tandis qu’avec 3 munitions au départ, les humains prennent immédiatement le dessus et l’on observe alors la quasi éradication des zombies.
 
 - Courbes 5 et 6 :  Modification de la précision de tir des humains
-Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier la précision de tir des humains avec le même nombre d’agents au départ ( 100 humains et 100 zombies ) et le même nombre de munitions de départ ( ici 3 ). La précision de tir est de 1 chance sur 2 pour la courbe 5 et 1 chance sur 3 pour la courbe 6.
+Ces deux courbes nous montrent l’évolution des deux populations lorsque l’on fait varier la précision de tir des humains avec le même nombre d’agents au départ (100 humains et 100 zombies) et le même nombre de munitions de départ (ici 3). La précision de tir est de 1 chance sur 2 pour la courbe 5 et 1 chance sur 3 pour la courbe 6.
 Là où les humains éradiquent rapidement les zombies sur la courbe 5, ils ont en revanche beaucoup plus de pertes sur la courbe 6 pour au final atteindre une stabilité entre les humains et les zombies.
 On pourrait alors imaginer que si l’on baissait encore plus la précision, les humains viendraient assez rapidement à être éradiqués par les zombies.
 
-Par ailleurs nous souhaitions coder une fonction nous perméttant de calculer la population moyenne d'Humain et de Zombie sur n simulations afin de pouvoir étudier le model sans que les paramètres aléatoires influent sur les résultats.
+Par ailleurs nous souhaitions coder une fonction nous permettant de calculer la population moyenne d'Humain et de Zombie sur n simulations afin de pouvoir étudier le model sans que les paramètres aléatoires influent sur les résultats.
 Cependant nous avons fait face à un problème et par soucis de temps n'avons pas pu finaliser cette fonction.
 
 ## VI. Summary
 
-First of all, our main goal was to model a Zombie attack in a city which is full of humans. We wanted to make a realistic city with a lot of buildings : hospitals, armories and shops (for food). Then, humans can evolve in a city which looks like a real city on Earth and they can interact with their environment. More specifically, our aim is to study the evolution of humans population compared to zombie’s one. Humans can kill zombies and zombies can bite humans which logically participate a lot in the evolution of populations. To brought to an end our project, we have encoded a map upon which we have placed randomly our buildings and agents, interacting there-between thanks to a lot of Python functions. The ‘class’ type of Python was really useful to encode humans and zombies along with other functions more familiar.
+First of all, our main goal was to model a Zombie attack in a city which is full of humans. We wanted to make a realistic city with a lot of buildings : hospitals, armories and shops (for food). Then, humans can evolve in a city which looks like a real city on Earth and they can interact with their environment. More specifically, our aim is to study the evolution of humans population compared to zombie’s one. Humans can kill zombies and zombies can bite humans which logically participate a lot in the evolution of populations. To brought an end to our project, we have encoded a map upon which we have placed randomly our buildings and agents, interacting there-between thanks to a lot of Python functions. The ‘class’ type of Python was really useful to encode humans and zombies along with other functions more familiar.
 
 ## ANNEXE 1
 
@@ -304,7 +304,7 @@ Epidémie de Zombies dans une ville
 ## II. Nos objectifs:
 
 - Étudier la propagation du virus à l’échelle d'une ville.
-- Au bout de combien de générations l’humanité a t-elle disparu, ou non ?
+- Au bout de combien de générations l’humanité a-t-elle disparu, ou non ?
 - Les humains ont-ils réussi à éradiquer le virus?
 - La rapidité du développement du virus en fonction du foyer de départ
 
@@ -340,7 +340,7 @@ Epidémie de Zombies dans une ville
 
 ### Les humains
 
-- Capacité à résister aux zombie
+- Capacité à résister aux zombies
 - Capacité à développer un remède
 - Immunisation au virus
 
@@ -359,21 +359,21 @@ Epidémie de Zombies dans une ville
 # COMPTE RENDU FIN DE SÉANCES
 
 ## 13/03/19
-Aujourd'hui Une partie du groupe s'est chargée de faire des recheches pour savoir comment coder une map et faire se déplacer les humains et zombie sur Python.
-L'autre partie du groupe quand à elle s'est chargé de commencer à définir les classes dont on allait avoir besoin pour le reste de notre code.
-Ils ont alors codé la fonction _init_(self) qui renferme toutes les caratéristiques des humains ainsi que les paramètres que nous utiliseront par la suite du programme.
+Aujourd'hui une partie du groupe s'est chargée de faire des recherches pour savoir comment coder une map et faire se déplacer les humains et zombie sur Python.
+L'autre partie du groupe quant à elle s'est chargé de commencer à définir les classes dont on allait avoir besoin pour le reste de notre code.
+Ils ont alors codé la fonction _init_(self) qui renferme toutes les caractéristiques des humains ainsi que les paramètres que nous utiliserons par la suite du programme.
 
 ## 20/03/19
-Nous avons definie nos paramètre généraux (modifiable) ainsi que fini de définir a classe Humain.
-Nous avons commencer à creer notre classe Zombie.
+Nous avons défini nos paramètre généraux (modifiable) ainsi que fini de définir a classe Humain.
+Nous avons commencé à créer notre classe Zombie.
 
 ## 27/03/19
 Aujourd'hui nous avons défini notre classe Zombie. Pour coder les classes nous nous sommes aidés de plusieurs sites comme: https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232721-apprehendez-les-classes?fbclid=IwAR0tlbxvmCCcZDxL5yMi-RJvmxID0JaxM4WikrRzws-XkD5qRQ3xB_fbg-s  .
 
 ## 03/04/19
 Aujourd'hui nous avons fini de coder la classe Zombie, coder la map sous forme de matrice.
-Nous avons également fixé les objectifs de notre visualisation (placement aléatoire des batiments, batiments en couleur, courbes de visualisations).
+Nous avons également fixé les objectifs de notre visualisation (placement aléatoire des bâtiments, bâtiments en couleurs, courbes de visualisations).
 
 ## 10/04/19
-Aujourd'hui nous avons finalisé le code de notre projet, nous avons réussi à visualiser notre animation qu'il reste à étudier. Nous avons déjà procédé à quelques simulations afin d'étudier les comportements de nos agents(zombies et humains) en fonction de nos paramètres modifables. Nous avons aussi bien avancé le compte rendu. 
+Aujourd'hui nous avons finalisé le code de notre projet, nous avons réussi à visualiser notre animation qu'il reste à étudier. Nous avons déjà procédé à quelques simulations afin d'étudier les comportements de nos agents (zombies et humains) en fonction de nos paramètres modifiables. Nous avons aussi bien avancé le compte rendu. 
 
