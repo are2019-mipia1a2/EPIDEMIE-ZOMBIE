@@ -75,7 +75,6 @@ class Humain:
             carte[i_humain,j_humain].place_MATRICE=i_humain,j_humain
             Liste_humain.remove(self)
             Liste_classe.remove(self)
-            #Append ??
             Liste_zombie+=carte[i_humain,j_humain]
             Liste_classe+=carte[i_humain,j_humain]
 
